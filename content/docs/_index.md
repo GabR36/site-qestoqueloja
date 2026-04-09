@@ -1,19 +1,8 @@
 +++
-title = 'Docs'
+title = 'Documentação do Sistema'
 date = 2026-04-06T23:11:24-03:00
 draft = false
 +++
-
-# Documentação do Sistema
-
-## Índice
-
-- [1. Configuração](#configuracao)
-- [2. Vendas](#vendas)
-- [3. Relatórios](#relatorios)
-- [4. Compras](#compras)
-
----
 
 ## 1. Configuração {#configuracao}
 
