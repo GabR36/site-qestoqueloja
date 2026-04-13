@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ $versao := site.Data.version.version }}
+{{ $vClean := replace $versao "v" "" }}
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    {{ partial "toc.html" . }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ .Title }}</h1>{{ end }}
+        <div class="hx:mt-6 hx:flex hx:flex-col hx:gap-4">
+	  <p>Escolha a versão compatível com seu sistema operacional.</p>
+	  <hr>
+	  <h2>Versão atual: {{ $versao }}</h2>
+	  <h2 class="hx:flex hx:items-center hx:gap-3 hx:text-2xl hx:font-semibold hx:mt-6">
+	    Windows
+	  </h2>
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2
+		    hx:text-sm hx:font-medium
+		    hx:text-white
+		    hx:bg-primary-600
+		    hover:hx:bg-primary-700
+		    hx:rounded-md
+		    hx:transition" href="https://github.com/GabR36/QEstoqueLoja/releases/download/{{ $versao }}/QEstoqueLoja{{ $vClean }}-Instalador.exe">Baixar para Windows QEstoqueLoja {{ $versao }} </a>
+	  <p>Se o Windows bloquear: </p>
+	  <p> - Clique em "Mais informações"</p>
+	  <p> - Depois em "Executar assim mesmo"</p>
+	  <hr>
+	  <h2 class="hx:flex hx:items-center hx:gap-3 hx:text-2xl hx:font-semibold hx:mt-6">Linux</h2>
+
+	  <h3>Distribuições baseadas em Debian</h3>
+
+	  <h4> Dependências </h4>
+
+	  <p>Primeiro baixe, descompacte e instale as dependências:</p>
+
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2
+		    hx:text-sm hx:font-medium
+		    hx:text-white
+		    hx:bg-primary-600
+		    hover:hx:bg-primary-700
+		    hx:rounded-md
+		    hx:transition" href="https://github.com/GabR36/QEstoqueLoja/releases/download/{{ $versao }}/dependencias_linux.7z">Baixar dependências para Linux</a>
+
+	  <h4> QEstoqueLoja</h4>
+
+	  <p>Depois instale o programa principal:</p>
+
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2
+		    hx:text-sm hx:font-medium
+		    hx:text-white
+		    hx:bg-primary-600
+		    hover:hx:bg-primary-700
+		    hx:rounded-md
+		    hx:transition" href="https://github.com/GabR36/QEstoqueLoja/releases/download/{{ $versao }}/qestoqueloja_{{ $vClean }}-1_amd64.deb">Baixar para Linux QEstoqueLoja v2.5.0</a>
+
+	  <p>Instale pela loja gráfica da sua distribuição ou pelo terminal com:
+	  </p>
+
+	  <code>
+	    sudo apt install ./qestoqueloja_2.5.0-1_amd64.deb
+	  </code>
+
+	  <h2 class="hx:flex hx:items-center hx:gap-3 hx:text-2xl hx:font-semibold hx:mt-6">Código Fonte</h2>
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2
+		    hx:text-sm hx:font-medium
+		    hx:text-white
+		    hx:bg-primary-600
+		    hover:hx:bg-primary-700
+		    hx:rounded-md
+		    hx:transition" href="https://github.com/GabR36/QEstoqueLoja/archive/refs/tags/{{$versao }}.zip">Baixar código fonte {{ $versao }} </a>
+	  <div class="content">
+	    {{ .Content }}
+	  </div>
+        </div>
+      </main>
+    </article>
+  </div>
+{{ end }}
