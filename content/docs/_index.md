@@ -2,6 +2,7 @@
 title = 'Documentação do Sistema'
 date = 2026-04-06T23:11:24-03:00
 draft = false
+layout = 'docs'
 +++
 
 ## 1. Configuração {#configuracao}

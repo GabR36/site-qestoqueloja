@@ -1,0 +1,162 @@
+{{ define "main" }}
+<div class='hx:mx-auto hx:flex hextra-max-page-width'>
+  <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+      <div>
+	<h1 class="hx:text-center hx:text-4xl hx:font-semibold
+	hx:mb-6">QEstoqueLoja</h1>
+	<p class="hx:text-2xl hx:text-center hx:pb-8 px-2.5">O
+	  QEstoqueLoja é um software ERP gratuito e de código aberto,
+	  emissor de Nota Fiscal Eletrônica e focado na facilidade de
+	  uso.</p>
+	<div class="hx:flex hx:justify-center hx:gap-4">
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2 hx:text-sm hx:font-medium
+		    hx:text-white hx:bg-primary-600
+		    hover:hx:bg-primary-700 hx:rounded-md
+		    hx:transition"
+	     href="/download/#windows">Baixar para Windows</a>
+	  <a class="hx:inline-flex hx:items-center hx:justify-center
+		    hx:px-4 hx:py-2 hx:text-sm hx:font-medium
+		    hx:text-white hx:bg-primary-600
+		    hover:hx:bg-primary-700 hx:rounded-md
+		    hx:transition"
+	     href="/download/#linux">Baixar para Linux</a>
+	</div>
+	<img class="card-img-top" src="/capturas_de_tela/capturaPrincipal.png" alt="">
+	<section id="funcionalidades" class="hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <h3 class="hx:text-center hx:text-2xl hx:font-semibold
+	  hx:mt-6">Funcionalidades</h3>
+	  <ul class="hx:flex hx:flex-col hx:gap-4 hx:text-center">
+	    <li><i class="fa-solid fa-money-bill"></i> Totalmente gratuito</li>
+	    <li><i class="fa-solid fa-file-invoice"></i> Emissão de
+	      Nota Fiscal Eletrônica (NF-e) e Nota Fiscal do
+	      Consumidor Eletrônica (NFC-e) para o regime simples
+	      nacional</li>
+	    <li><i class="fa-solid fa-arrow-trend-up"></i> Controle de
+	    estoque e preço de produtos</li>
+	    <li><i class="fa-solid fa-barcode"></i> Uso de código de barras</li>
+	    <li><i class="fa-solid fa-file-import"></i> Importação de
+	    produtos a partir da NF-e</li>
+	    <li><i class="fa-brands fa-windows"></i> Instaladores para
+	    Windows e Linux</li>
+	    <li><i class="fa-regular fa-envelope-open"></i> Envio de
+	    dados para o contador via e-mail</li>
+	    <li><i class="fa-solid fa-at"></i> Envio de notas fiscais
+	    para o cliente via e-mail</li>
+	    <li><i class="fa-solid fa-cash-register"></i> Ponto de
+	    Venda (PDV)</li>
+	    <li><i class="fa-regular fa-address-card"></i> Importação
+	    de dados de clientes a partir do CNPJ</li>
+	    <li><i class="fa-solid fa-basket-shopping"></i> Criação de orçamentos</li>
+	    <li><i class="fa-solid fa-xmark"></i> Separação de produtos com nota fiscal e sem</li>
+	    <li><i class="fa-solid fa-calendar-day"></i> Vendas a prazo</li>
+	    <li><i class="fa-solid fa-chart-area"></i> Relatórios de vendas, lucro, formas de pagamento, valor de
+	      notas fiscais</li>
+	    <li><i class="fa-solid fa-plane-slash"></i> Emissão de notas fiscais em contingência</li>
+	    <li><i class="fa-solid fa-receipt"></i> Impressão de etiquetas e recibos</li>
+	  </ul>
+	</section>
+	<section id="capturas-de-tela" class="hx:text-center hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <div class="container">
+	    <h3 class="hx:text-center hx:text-2xl hx:font-semibold hx:mt-6">Capturas
+	    de tela</h3>
+	    <div class="hx:flex hx:flex-wrap hx:justify-center">
+	      <div class="card" style="width: 18rem;">
+		<a href="#img1">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaPrincipal.png" alt="">
+		</a>
+		<div class="card-body">
+		  <p>Tela Principal</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	      <div class="card" style="width: 18rem;">
+		<button type="button" data-bs-toggle="modal"
+			data-bs-target="#capturaPrincipal">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaVendas.png" alt="">
+		</button>
+		<div class="card-body">
+		  <p>Tela de Vendas</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	      <div class="card" style="width: 18rem;">
+		<button type="button" data-bs-toggle="modal"
+			data-bs-target="#capturaPrincipal">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaVenda.png" alt="">
+		</button>
+		<div class="card-body">
+		  <p>Tela PDV</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	      <div class="card" style="width: 18rem;">
+		<button type="button" data-bs-toggle="modal"
+			data-bs-target="#capturaPrincipal">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaPagamento.png" alt="">
+		</button>
+		<div class="card-body">
+		  <p>Tela Pagamento</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	      <div class="card" style="width: 18rem;">
+		<button type="button" data-bs-toggle="modal"
+			data-bs-target="#capturaPrincipal">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaGrafico.png" alt="">
+		</button>
+		<div class="card-body">
+		  <p>Tela de Relatórios</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	      <div class="card" style="width: 18rem;">
+		<button type="button" data-bs-toggle="modal"
+			data-bs-target="#capturaPrincipal">
+		  <img class="card-img-top" src="/capturas_de_tela/capturaMonitor.png" alt="">
+		</button>
+		<div class="card-body">
+		  <p>Tela Monitor Fiscal</p>
+		  <!-- modal -->
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<section id="download" class="hx:text-center hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <h3 class="hx:text-2xl hx:font-semibold
+		     hx:mt-6">Download</h3>
+	  <p>Oferecemos instaladores para múltiplos sistemas
+	    operacionais. <a class="hx:font-semibold"
+			     href="/download">Baixe aqui</a></p>
+	</section>
+	<section id="suporte" class="hx:text-center hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <h3 class="hx:text-center hx:text-2xl hx:font-semibold hx:mt-6">Suporte</h3>
+	  <p>Para documentação veja <a class="hx:font-semibold" href="/docs">Documentação</a>.</p>
+	</section>
+	<section id="participe" class="hx:text-center hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <h3 class="hx:text-center hx:text-2xl hx:font-semibold hx:mt-6">Participe</h3>
+	  <p>QEstoqueLoja é um projeto gratuito e de
+	    código aberto. Para se manter em desenvolvimento contínuo
+	    necessitamos da sua ajuda.</p>
+	  <p>Você pode ajudar com o programação, respondendo questões,
+	    reportando bugs, ajudando com a documentação ou nos contando sua experiência de uso.</p>
+	  <p>O desenvolvimento é feito
+	    no <a class="hx:font-semibold" href="https://github.com/GabR36/QEstoqueLoja">Github</a>.</p>
+	</section>
+	<section id="ajude" class="hx:text-center hx:flex hx:flex-col hx:gap-4 hx:mt-6">
+	  <h3 class="hx:text-2xl hx:font-semibold hx:mt-6">Ajude a espalhar a palavra</h3>
+	  <ul class=" hx:pl-6">
+	    <li><i class="fa-solid fa-star"></i> Dê uma estrela ao projeto
+	      no <a class="hx:font-semibold" href="https://github.com/GabR36/QEstoqueLoja">Github</a></li>
+	    <li><i class="fa-solid fa-box-open"></i> Peça a sua distro para empacotá-lo</li>
+	    <li><i class="fa-solid fa-bullhorn"></i> Fale sobre ele para seus colegas</li>
+	  </ul>
+	</section>
+      </div>
+    </main>
+  </article>
+</div>
+
+{{ end }}
